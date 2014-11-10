@@ -48,7 +48,13 @@ class peoService{
 	 $sqlHelper->close_connect();
 	 return $arr;
   }
-	  
+  function updatePeo($id,$name,$class,$phoneNum,$college,$team){
+	 $sql="update peoples set name='$name',class=$class,phoneNum=$phoneNum,college='$college',team='$team' where id='$id'";
+	 $sqlHelper=new SqlHelper();
+	 $res=$sqlHelper->execute_dml($sql);
+	 $sqlHelper->close_connect();
+	 return $res; 
+  }
   
 }
 ?>

@@ -41,6 +41,21 @@ if(!empty($_REQUEST['flag'])){
 		     exit();
 		}
 		
+	}else if ($flag=="updatePeo"){
+		$id=$_POST['id'];
+		$name=$_POST['name'];
+		$class=$_POST['class'];
+		$phoneNum=$_POST['phoneNum'];
+		$college=$_POST['college'];
+		$team=$_POST['team'];
+		$res=$peoService->updatePeo($id,$name,$class,$phoneNum,$college,$team);
+		if($res==1){
+			header("Location:ok.php");
+			exit();
+		}else{
+			 header("Location:error.php");
+		     exit();
+		}
 	}
 }
 

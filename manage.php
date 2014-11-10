@@ -9,7 +9,9 @@
 <?php
 $name=$_GET['name'];
 echo "欢迎".$name."登陆成功";
-echo "<br><a href='index.php'>返回重新登录";
+echo "<br><a href='index.php'>返回重新登录<br>";
+require_once 'common.php';
+getLastTime();
 ?>
 
 <h1>主界面</h1>

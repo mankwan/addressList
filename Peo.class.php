@@ -5,8 +5,7 @@ class Peoples{
 	private $class;
 	private $phoneNum;
 	private $college;
-	private $team;
-	
+	private $team;	
 	public function getId(){
 		return $this->id;
 	}
